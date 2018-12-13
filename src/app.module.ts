@@ -2,14 +2,13 @@ import { Module, HttpModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { MessageModule } from './messages/message/message.module';
-import { MessageModule } from './message/message.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
     HttpModule,
-    MongooseModule.forRoot('mongodb://localhost/produk'),
-    MessageModule
+    ProductsModule,
+    MongooseModule.forRoot('mongodb://localhost:27017/produk'),
   ],
   controllers: [AppController],
   providers: [AppService],
