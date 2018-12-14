@@ -23,5 +23,13 @@ export class ProductsService {
     async getProduct(id): Promise<Product>{
         return await this.productModel.findOne({_id: id});
     }
+
+    async updateProduct(id, product): Promise<Product>{
+        return await this.productModel.findOneAndUpdate({_id: id}, {$set:product});
+    }
+
+    async deleteProduct(id): Promise<Product>{
+        return await this.productModel.findOneAndDelete({_id: id});
+    }
  
 }
