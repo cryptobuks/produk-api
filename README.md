@@ -26,7 +26,12 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Simple Backend APP on top NestJS with Mongoose MongoDB. This project using Mongoose library to handle nestjs connection with mongodb. This project using MongoDB atlas, see ``` app.module.ts ``` line 12.
+
+Change :
+``` MongooseModule.forRoot(process.env.DB_URL) ``` 
+to 
+``` MongooseModule.forRoot('mongodb://your-url') ```
 
 ## Installation
 
