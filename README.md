@@ -33,6 +33,8 @@ Change :
 to 
 ``` MongooseModule.forRoot('mongodb://your-url') ```
 
+<p>Local <a href="http://localhost:3000/docs/api" target="_blank">API Documentation</a>.</p>
+
 ## Installation
 
 ```bash
