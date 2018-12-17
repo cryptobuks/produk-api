@@ -23,6 +23,7 @@
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
     "@nestjs/mongoose": "^5.2.2",
+    "@nestjs/swagger": "^2.5.1",
     "dotenv": "^6.2.0",
     "mongoose": "^5.3.16",
     "reflect-metadata": "^0.1.12",

@@ -1,9 +1,9 @@
-import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
- 
+import { ApiModelProperty, ApiCreatedResponse, ApiForbiddenResponse } from '@nestjs/swagger';
+import { Controller, Get, Post, Body, Param, Put, Delete, Header } from '@nestjs/common';
 import { ProductDto } from './product.dto';
 import { ProductsService } from './products.service';
  
-@Controller('products') // declared a prefix for every route
+@Controller('api/products') // declared a prefix for every route
 export class ProductsController {
  
     constructor(private productService: ProductsService){
@@ -11,6 +11,8 @@ export class ProductsController {
     }
  
     @Post()
+    @ApiCreatedResponse({ description: 'The product has been successfully created.'})
+    @ApiForbiddenResponse({ description: 'Forbidden.'})
     async createProduct(@Body() product: ProductDto){
         return await this.productService.createProduct(product);
     }
