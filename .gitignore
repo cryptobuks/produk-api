@@ -1,2 +1,32 @@
-src/mongodbcredentials.ts
-mongodbcredentials.ts
+# dependencies
+node_modules/
+
+# IDE
+/.idea
+/.awcache
+/.vscode
+
+# bundle
+packages/**/*.d.ts
+packages/**/*.js
+
+# misc
+.env
+.DS_Store
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+/**/npm-debug.log
+/packages/**/.npmignore
+/packages/**/LICENSE
+
+# example
+/quick-start
+/example_dist
+/example
+
+# tests
+/test
+/coverage
+/.nyc_output
+build/config\.gypi
